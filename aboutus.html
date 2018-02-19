@@ -1,0 +1,47 @@
+<style>
+//@import url('https://fonts.googleapis.com/css?family=Kanit:800');
+@import url('https://fonts.googleapis.com/css?family=Bungee+Shade');
+
+:root {
+  --f-size: 15;
+  --f-unit: 1vmin;
+  --f: calc(var(--f-size) * var(--f-unit));
+  --bg: #181717; 
+}
+
+*, *::after, *::before {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Bungee Shade', cursive;//'Kanit', sans-serif;
+  font-size: var(--f);
+  
+  background-color: var(--bg);
+  display: flex;
+  min-height: 100vh;
+  margin: 0;
+  overflow: hidden;
+}
+
+p {
+  flex: 1;
+  line-height: .75;
+  margin: auto;
+  color: #1af0dc;
+  text-align: center;
+  transform: scaleX(var(--scale, 1));
+  animation: glitch-p 11s infinite alternate;
+  
+  &::before,
+  &::after {
+    --top: 0;        // offset from top [0 - 10]
+    --left: 0;       // offset from left [0.001 - 1]
+    --v-height: 30%; // visible part
+    
+    --n-tenth: calc(var(--f-size) * .1 * var(--top));
+    --t-cut: calc(var(--n-tenth) / var(--f-size) * 100%);
+    --b-cut: calc(var(--t-cut) + var(--v-height));
+    
+</style>
+<p data-text="PSYCHO">0wned Lab</p>
