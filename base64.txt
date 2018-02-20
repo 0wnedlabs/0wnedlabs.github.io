@@ -1,2 +1,0 @@
-Challenge : Base64 encode/decode : 0WnedLab 
-Use PYTHON.
