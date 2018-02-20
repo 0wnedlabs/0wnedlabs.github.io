@@ -3,7 +3,7 @@ function Login(){
 	var username=user.toLowerCase();
 	var password=document.login.password.value;
 	password=password.toLowerCase();
-	if (user=="admin" && password=="admin") {
+	if (user=="admin" && password=="0wned") {
 	    alert("flag{javascript_sucks}");
 	} else { 
 	    alert("0wnedlab : Error, Try again. You can do it ! :D"); 
