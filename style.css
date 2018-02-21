@@ -16,5 +16,6 @@
         color: #ace600  !important;
     } 
 a:hover, a:focus {
+    color: #ace600;
     text-decoration:none;
     }
