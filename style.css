@@ -19,3 +19,6 @@ a:hover, a:focus {
     color: #ace600;
     text-decoration:none;
     }
+a {
+  color: #ace600;
+}
