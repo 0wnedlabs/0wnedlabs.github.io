@@ -12,3 +12,6 @@
     text-align: center;
     color: #ace600;
     }
+.navbar-brand {
+        color: #ace600  !important;
+    } 
