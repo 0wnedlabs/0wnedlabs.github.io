@@ -37,7 +37,7 @@
 .terminal_emulator__command:before {
   left: 0;
   top: 0;
-  content: ">";
+  content: "#";
 }
 
 .terminal_emulator__response,
