@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>particles.js</title>
+  <meta name="description" content="particles.js is a lightweight JavaScript library for creating particles.">
+  <meta name="author" content="Vincent Garreau" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <link rel="stylesheet" media="screen" href="css/style.css">
+      <link href="css/bootstrap.min.css" rel="stylesheet">    
+    <script src="http://code.jquery.com/jquery-1.10.2.min.js"></script>
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>  
+</head>
+<style type="text/css">
+        
+    /*
+Credits:
+Code snippet by @maridlcrmn (Follow me on Twitter)
+Images by Nike.com (http://www.nike.com/us/en_us/)
+Logo by Sneaker-mission.com (http://www.sneaker-mission.com/)
+*/
+
+.navbar-brand { 
+  width: 70px;
+  height: 50px;
+  background: url('http://www.sneaker-mission.com/uploads/3/1/2/7/31279819/5617441.png') no-repeat center center;
+  background-size: 50px;  
+}
+
+.nav-tabs {
+  display: inline-block;
+  border-bottom: none;
+  padding-top: 15px;
+  font-weight: bold;
+}
+.nav-tabs > li > a, 
+.nav-tabs > li > a:hover, 
+.nav-tabs > li > a:focus, 
+.nav-tabs > li.active > a, 
+.nav-tabs > li.active > a:hover,
+.nav-tabs > li.active > a:focus {
+  border: none;
+  border-radius: 0;
+}
+
+.nav-list { border-bottom: 1px solid #000000; }
+.nav-list > li { 
+  padding: 20px 15px 15px;
+  border-left: 1px solid #000000; 
+}
+.nav-list > li:last-child { border-right: 1px solid #000000; }
+.nav-list > li > a:hover { text-decoration: none; }
+.nav-list > li > a > span {
+  display: block;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.mega-dropdown { position: static !important; }
+.mega-dropdown-menu {
+  padding: 20px 15px 15px;
+  text-align: center;
+  width: 100%;
+}
+.background {
+    background-color: #22262a;
+}    
+    </style>
+<body>
+
+<!-- count particles -->
+
+
+<!-- particles.js container -->
+<div id="particles-js">
+ <body class="background">
+
+
+
+	<nav class="navbar navbar-default" role="navigation">
+  <div class="container-fluid">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-megadropdown-tabs">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="index.html"><p><font color="green">0wnedLab</p></a>
+      <a class="navbar-brand" href="javascript:;"></a>
+    </div>
+
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse" id="bs-megadropdown-tabs">
+        <ul class="nav navbar-nav">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="#">Tutorials</a></li>
+            <li><a href="machines.html">Machines</a></li>
+    		<li class="dropdown mega-dropdown active">
+			    <a href="javascript:;" class="dropdown-toggle" data-toggle="dropdown">Challenges <span class="caret"></span></a>				
+				<div class="dropdown-menu mega-dropdown-menu">
+                    <div class="container-fluid">
+    				    <!-- Tab panes -->
+                        <div class="tab-content">
+                          <div class="tab-pane active" id="men">
+                            <ul class="nav-list list-inline">
+                                <li><a href="sql.html"><img src="img/web.png"><p></p><span>SQL</span></a></li>
+                                <li><a href="javascript:;"><img src="img/web.png"><p></p><span>RCE</span></a></li>
+                                <li><a href="javascript:;"><img src="img/web.png"><p></p><span>XSS</span></a></li>
+                                <li><a href="javascript:;"><img src="img/web.png"><p></p><span>IDOR</span></a></li>
+                                <li><a href="javascript:;"><img src="img/web.png"><p></p><span>Misconfiguration</span></a></li>
+                                <li><a href="javascript:;"><img src="img/web.png"><p></p><span>Other</span></a></li>
+                            </ul>
+                          </div>
+                          <div class="tab-pane" id="women">
+                            <ul class="nav-list list-inline">
+                                <li><a href="javascript:;"><img src="http://content.nike.com/content/dam/one-nike/globalAssets/menu_header_images/OneNike_Global_Nav_Icons_Running.png"><span>Running</span></a></li>
+                                <li><a href="javascript:;"><img src="http://content.nike.com/content/dam/one-nike/globalAssets/menu_header_images/OneNike_Global_Nav_Icons_Basketball.png"><span>Basketball</span></a></li>
+                                <li><a href="javascript:;"><img src="http://content.nike.com/content/dam/one-nike/globalAssets/menu_header_images/OneNike_Global_Nav_Icons_Football.png"><span>Football</span></a></li>
+                                <li><a href="javascript:;"><img src="http://content.nike.com/content/dam/one-nike/globalAssets/menu_header_images/OneNike_Global_Nav_Icons_Soccer.png"><span>Soccer</span></a></li>                                
+                            </ul>
+                          </div>
+                          <div class="tab-pane" id="kids">
+                            <ul class="nav-list list-inline">
+                                <li><a href="javascript:;"><img src="http://content.nike.com/content/dam/one-nike/globalAssets/menu_header_images/OneNike_Global_Nav_Icons_Running.png"><span>Running</span></a></li>
+                                <li><a href="javascript:;"><img src="http://content.nike.com/content/dam/one-nike/globalAssets/menu_header_images/OneNike_Global_Nav_Icons_Basketball.png"><span>Basketball</span></a></li>
+                                <li><a href="javascript:;"><img src="http://content.nike.com/content/dam/one-nike/globalAssets/menu_header_images/OneNike_Global_Nav_Icons_Football.png"><span>Football</span></a></li>
+                                <li><a href="javascript:;"><img src="http://content.nike.com/content/dam/one-nike/globalAssets/menu_header_images/OneNike_Global_Nav_Icons_Soccer.png"><span>Soccer</span></a></li>
+                                <li><a href="javascript:;"><img src="http://content.nike.com/content/dam/one-nike/globalAssets/menu_header_images/OneNike_Global_Nav_Icons_MensTraining.png"><span>Men's Training</span></a></li>
+                                <li><a href="javascript:;"><img src="http://content.nike.com/content/dam/one-nike/globalAssets/menu_header_images/OneNike_Global_Nav_Icons_WomensTraining.png"><span>Women's Training</span></a></li>
+                            </ul>
+                          </div>
+                          <div class="tab-pane" id="sports">
+                            <ul class="nav-list list-inline">                                
+                                <li><a href="javascript:;"><img src="http://content.nike.com/content/dam/one-nike/globalAssets/menu_header_images/OneNike_Global_Nav_Icons_Basketball.png"><span>Basketball</span></a></li>
+                                <li><a href="javascript:;"><img src="http://content.nike.com/content/dam/one-nike/globalAssets/menu_header_images/OneNike_Global_Nav_Icons_Football.png"><span>Football</span></a></li>
+                                <li><a href="javascript:;"><img src="http://content.nike.com/content/dam/one-nike/globalAssets/menu_header_images/OneNike_Global_Nav_Icons_Soccer.png"><span>Soccer</span></a></li>
+                                <li><a href="javascript:;"><img src="http://content.nike.com/content/dam/one-nike/globalAssets/menu_header_images/OneNike_Global_Nav_Icons_MensTraining.png"><span>Men's Training</span></a></li>
+                                <li><a href="javascript:;"><img src="http://content.nike.com/content/dam/one-nike/globalAssets/menu_header_images/OneNike_Global_Nav_Icons_WomensTraining.png"><span>Women's Training</span></a></li>
+                            </ul>
+                          </div>
+                        </div>
+                    </div>
+                    <!-- Nav tabs -->
+                    <ul class="nav nav-tabs" role="tablist">
+                       <li class="active"><a href="#men" role="tab" data-toggle="tab">Web</a></li>
+                       <li><a href="#women" role="tab" data-toggle="tab">Stego</a></li>
+                       <li><a href="#kids" role="tab" data-toggle="tab">Reverse</a></li>
+                       <li><a href="#sports" role="tab" data-toggle="tab">Programming</a></li>
+                    </ul>                    
+				</div>				
+			</li>
+        </ul>
+       
+
+        </form>
+        <ul class="nav navbar-nav navbar-right">
+            <li class="dropdown">
+              <a href="javascript:;" class="dropdown-toggle" data-toggle="dropdown">127.0.0.1 <span class="caret"></span></a>
+              <ul class="dropdown-menu" role="menu">
+                <li><a href="javascript:;">About Us</a></li>
+                <li><a href="javascript:;">Contact Us</a></li>
+                <li><a href="javascript:;">Staff</a></li>
+                <li class="divider"></li>
+                <li><a href="javascript:;">Donate</a></li>
+              </ul>
+            </li>
+        </ul>
+        
+    </div><!-- /.navbar-collapse -->
+    
+  </div><!-- /.container-fluid -->
+</nav>
+<div class="container">
+<div class="row">
+	<center><h1><font color="green">Tutorials</h1></center>
+	<br></br>
+	<br></br>
+	<section id="plans">
+        <div class="container">
+            <div class="row">
+
+                <!-- item -->
+<p><h2>Web Hacking</h2></p>
+<table id="mytable" class="table table-bordred table-striped">
+                   
+                   <thead>
+                   
+
+                   <tr><th>Type</th>
+                    <th>Name</th>
+                     <th>Maker</th>
+                     <th>Rate</th>
+                     <th>Start</th>                     
+                   </tr></thead>
+    <tbody>
+    
+    <tr>
+
+    <td>Blind SQL</td>
+    <td>TimeOut</td>
+    <td>Florianx00</td>
+    <td>High</td>
+    <td><a href="download.html">Link</a></td>
+    </tr>
+
+    
+ <tr>
+
+    <td>SQL</td>
+    <td>TimeOut</td>
+    <td>Florianx00</td>
+    <td>High</td>
+    <td><a href="download.html">Link</a></td>
+    </tr>
+    
+    
+ <tr>
+
+    <td>SQL</td>
+    <td>TimeOut</td>
+    <td>Florianx00</td>
+    <td>High</td>
+    <td><a href="download.html">Link</a></td>
+    </tr>
+
+   
+    
+   
+    
+    </tbody>
+        
+</table>
+<p><h2>Binary Hacking</h2></p>
+<table id="mytable" class="table table-bordred table-striped">
+                   
+                   <thead>
+                   
+
+                   <tr><th>Type</th>
+                    <th>Name</th>
+                     <th>Maker</th>
+                     <th>Rate</th>
+                     <th>Start</th>                     
+                   </tr></thead>
+    <tbody>
+    
+    <tr>
+
+    <td>Blind SQL</td>
+    <td>TimeOut</td>
+    <td>Florianx00</td>
+    <td>High</td>
+    <td><a href="download.html">Link</a></td>
+    </tr>
+
+    
+ <tr>
+
+    <td>SQL</td>
+    <td>TimeOut</td>
+    <td>Florianx00</td>
+    <td>High</td>
+    <td><a href="download.html">Link</a></td>
+    </tr>
+    
+    
+ <tr>
+
+    <td>SQL</td>
+    <td>TimeOut</td>
+    <td>Florianx00</td>
+    <td>High</td>
+    <td><a href="download.html">Link</a></td>
+    </tr>
+
+   
+    
+   
+    
+    </tbody>
+        
+</table>
+
+
+
+<p><h2>Stegno Hacking</h2></p>
+<table id="mytable" class="table table-bordred table-striped">
+                   
+                   <thead>
+                   
+
+                   <tr><th>Type</th>
+                    <th>Name</th>
+                     <th>Maker</th>
+                     <th>Rate</th>
+                     <th>Start</th>                     
+                   </tr></thead>
+    <tbody>
+    
+    <tr>
+
+    <td>Blind SQL</td>
+    <td>TimeOut</td>
+    <td>Florianx00</td>
+    <td>High</td>
+    <td><a href="download.html">Link</a></td>
+    </tr>
+
+    
+ <tr>
+
+    <td>SQL</td>
+    <td>TimeOut</td>
+    <td>Florianx00</td>
+    <td>High</td>
+    <td><a href="download.html">Link</a></td>
+    </tr>
+    
+    
+ <tr>
+
+    <td>SQL</td>
+    <td>TimeOut</td>
+    <td>Florianx00</td>
+    <td>High</td>
+    <td><a href="download.html">Link</a></td>
+    </tr>
+
+   
+    
+   
+    
+    </tbody>
+        
+</table>
+
+                    
+                  </div>
+                  </div>
+	
+	
+	
+</div>	
+	
+</div>
+	<script type="text/javascript"></script>
+
+<script type="text/javascript">
+    
+	$(document).ready(function(){
+    $(".dropdown").hover(            
+        function() {
+            $('.dropdown-menu', this).stop( true, true ).slideDown("slow");
+            $(this).toggleClass('open');        
+        },
+        function() {
+            $('.dropdown-menu', this).stop( true, true ).slideUp("slow");
+            $(this).toggleClass('open');       
+        }
+    );
+});
+	
+</script>
+
+</div>
+
+
+<center><font color="green"><h3>We created this project and maintain it because in our ideology practicing challenges and machines is a step in learning.
+</h3></p></center>
+
+</body>
+<footer><center><h3>© 2018 0wnedlab | Beta</h3><center></footer>
+</html>
