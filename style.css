@@ -11,8 +11,9 @@
 .maintext {   
     padding: 3rem 1.5rem;
     text-align: center;
-    text-shadow: 0 0 20px 20px black;
+    background-color: #000000ab;
     color: #00ff3a;
+    
     }
 .navbar-brand {
         color: #ace600  !important;
